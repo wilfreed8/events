@@ -1,6 +1,10 @@
 {
     "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
+      { "source": "/(.*)", "destination": "{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "https://mylaravelapi.vercel.app/api/api/$1" }
+  ]
+}" }
     ]
   }
   
